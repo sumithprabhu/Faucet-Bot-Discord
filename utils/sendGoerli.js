@@ -1,4 +1,4 @@
-const {PRIVATE_KEY, FROM_ADDRESS } = require('../config.json');
+const {PRIVATE_KEY, FROM_ADDRESS ,INFURA_GOERLI_URL} = require('../config.json');
 const ethers = require("ethers");
 
 module.exports = async (toAddress, amount) => {
@@ -14,7 +14,7 @@ module.exports = async (toAddress, amount) => {
     };
   }
   const provider = new ethers.providers.JsonRpcProvider(
-    "https://goerli.infura.io/v3/d1a5661a0d464cf291b547adb04f1da9"
+    INFURA_GOERLI_URL
   );
 
 

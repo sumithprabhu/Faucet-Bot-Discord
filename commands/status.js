@@ -11,7 +11,7 @@ module.exports = {
 		let balance;
 		try {
 			const provider = new ethers.providers.JsonRpcProvider(
-				"https://goerli.infura.io/v3/d1a5661a0d464cf291b547adb04f1da9"
+				INFURA_GOERLI_URL
 			  );
 			const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 			balance = await wallet.getBalance();
