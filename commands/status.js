@@ -8,8 +8,10 @@ module.exports = {
 		.setName('status')
 		.setDescription('Gives you status of our Faucet'),
 	async execute(interaction) {
+		
 		let balance;
 		try {
+			await interaction.deferReply();
 			const provider = new ethers.providers.JsonRpcProvider(
 				INFURA_GOERLI_URL
 			  );
@@ -19,10 +21,10 @@ module.exports = {
 		}
 		catch (e) {
 			console.log(e);
-			return interaction.reply('Error getting balance. Please check logs.');
+			return interaction.followUp('Error getting balance. Please check logs.');
 		}
 
 		const balanceShort = (parseInt(balance) / 1e18).toFixed(3);;
-		return interaction.reply(`Current balance: ${balanceShort} ETH.\nDonate: ${FROM_ADDRESS}`);
+		return interaction.followUp(`Current balance: ${balanceShort} ETH.\nDonate: ${FROM_ADDRESS}`);
 	},
 };
