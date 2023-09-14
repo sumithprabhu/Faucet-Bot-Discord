@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { FROM_ADDRESS,PRIVATE_KEY} = require('../config.json');
+const { FROM_ADDRESS,PRIVATE_KEY,INFURA_GOERLI_URL} = require('../config.json');
 const ethers = require('ethers');
 
 
