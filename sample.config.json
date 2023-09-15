@@ -1,0 +1,14 @@
+{
+    "clientId": "",
+    "guildId": "",
+    "token": "",
+      "INFURA_GOERLI_URL": "",
+      "PRIVATE_KEY": "",
+      "FROM_ADDRESS": "",
+      "cooldown": 43200000,
+      "amount": "0.01",
+      "maxFeePerGas": 95000000000,
+      "activityType": "WATCHING",
+      "activityName": "push.org"
+      
+  }
